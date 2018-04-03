@@ -66,7 +66,8 @@ var coffees = [
 
 for(var i = 0; i <   coffees.length; i++){
 
-    var html = "<div><h3>" + coffees[i].name + "</h3>"+ "<p>" + coffees[i].roast + "</p></div>"
+    var html = "<div class='coffeeContainer'><h3>" + coffees[i].name + "</h3>"+ "<p>"
+                     + coffees[i].roast + "</p></div>";
 
     document.write(html)
 }
