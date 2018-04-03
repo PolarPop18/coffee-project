@@ -66,10 +66,15 @@ var coffees = [
 
 for(var i = 0; i <   coffees.length; i++){
 
-    var html = "<div class='coffeeContainer'><h3>" + coffees[i].name + "</h3>"+ "<p>"
+    var html = "<div class='col-6 row '><h3 class=' pr-1  d-inline'>" +
+                    "" + coffees[i].name + "</h3>"+ "<p class='d-inline text-secondary'>"
                      + coffees[i].roast + "</p></div>";
 
-    document.write(html)
+   // document.write(html)
+
+
+
+    document.getElementById('coffeeType').innerHTML += html;
 }
 
 
