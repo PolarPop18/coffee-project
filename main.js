@@ -62,8 +62,18 @@ var coffees = [
 // submitButton.addEventListener('click', updateCoffees);
 
 
-coffees.forEach(function () {
-    var i = 0;
-    console.log(coffees[i]);
-    i++;
-});
+
+
+for(var i = 0; i <   coffees.length; i++){
+
+    var html = "<div></div><h3>" + coffees[i].name + "</h3>"+ "<p>" + coffees[i].roast + "</p></div>"
+
+    document.write(html)
+}
+
+
+// coffees.forEach(function (coffees) {
+//     var i = 0;
+//
+//     i++;
+// });

@@ -15,7 +15,7 @@ improvements to it.
 ## TODO
 
 - Update the html
-
+/*********** DONE*****************?
     Tables are a little old school, you need to refactor the code so that each
     coffee is displayed in a `div` that contains a heading displaying the coffee
     name, and the type of roast in a paragraph. Don't display the ids, these are
