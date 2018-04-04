@@ -62,3 +62,21 @@ coffeeName.addEventListener("input", function () {
     document.getElementById('coffeeType').innerHTML = html;
 });
 
+    })});
+var addName= document.getElementById("addNew");
+
+
+
+function addCoffee(){
+
+    event.preventDefault();
+    var coffeeName= document.getElementById("addName").value;
+    // document.getElementById('coffeeType').innerHTML = html;
+   var roastNew = document.getElementById('RoastAdd').value;
+    var newCoffee= {id:coffees.length + 1 , name: coffeeName, roast: roastNew};
+    coffees.push(newCoffee);
+   displayCoffees()
+}
+addName.addEventListener('click',addCoffee);
+
+
