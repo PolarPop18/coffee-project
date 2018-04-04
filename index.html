@@ -11,22 +11,25 @@
     <h1 class="ml-auto mr-auto">Coffee!</h1>
     </div>
     <hr>
+    <div class="row">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+        <div class="col order-2">
+        <form>
+            <label for="roast-selection"></label>
+            <select class="container-fluid" id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <input id="submit" type="submit" />
+        </form>
+        </div>
+        <div class="col order-1">
+        <div id="coffeeType" class="ml-1 row">
+        </div>
 
-    <div id="coffeeType" class="row">
-
-
+        </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
