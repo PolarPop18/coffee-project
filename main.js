@@ -73,13 +73,18 @@ function displayCoffees() {
 
 displayCoffees();
 
-var target = document.getElementsByTagName('select')[0];
+var target = document.getElementById('roast-selection');
+var coffeeName = document.getElementById('coffeeName');
+var x = "";
+var y = "";
+var html = '';
+
 
 target.addEventListener("change", function() {
 
-    var html = '';
+    html = '';
     coffees.forEach(function (coffees) {
-        var x = document.getElementById("roast-selection").value;
+         x = document.getElementById("roast-selection").value;
 
         if (x === coffees.roast) {
 
@@ -88,4 +93,27 @@ target.addEventListener("change", function() {
         }
         document.getElementById('coffeeType').innerHTML = html;
 
+
     })});
+
+
+
+coffeeName.addEventListener("input", function() {
+
+
+    coffees.forEach(function (coffees) {
+        y = document.getElementById("coffeeName").value;
+
+        if (coffees.name.match(y)) {
+
+
+            console.log("the if statement is firing")
+
+            // html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
+        }
+        document.getElementById('test').innerHTML = html;
+
+
+    })});
+
+console.log(y);
