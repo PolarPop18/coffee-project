@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="col-10 ml-auto mr-auto">
     <div class="row">
     <h1 class="ml-auto mr-auto">Coffee!</h1>
     </div>
@@ -14,14 +15,29 @@
     <div class="row">
 
         <div class="col order-2">
+
         <form>
-            <label for="roast-selection"></label>
-            <select class="container-fluid" id="roast-selection">
+            <label for="roast-selection">Roast</label>
+            <select class="container-fluid mb-3" id="roast-selection">
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-            <input id="submit" type="submit" />
+            <label for="coffeeName">Coffee Name</label>
+            <input id="coffeeName" class="container-fluid mb-3" type="text">
+            <input class="btn btn-primary btn-block" id="submit" type="submit"/>
+            <hr>
+            <div>
+
+                <h2 class=" text-center">Add a Coffee</h2>
+
+                <label for="addRoast">Roast</label>
+                <input id="addRoast" class="container-fluid mb-3" type="text">
+                <label for="addName">Name</label>
+                <input id="addName" class="container-fluid mb-3" type="text">
+                <input class="btn btn-primary btn-block" id="addNew" type="submit"/>
+
+            </div>
         </form>
         </div>
         <div class="col order-1">
@@ -29,6 +45,7 @@
         </div>
 
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
