@@ -1,44 +1,5 @@
 "use strict";
 
-
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.id + '</td>';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-
-
-// function renderCoffee(coffee) {
-//     var html = '<tr class="coffee">';
-//     html += '<td>' + coffee.name + '</td>';
-//     html += '<td>' + coffee.roast + '</td>';
-//     html += '</tr>';
-//
-//     return html;
-// }
-
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = coffees.length - 1; i >= 0; i--) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
-
-// function updateCoffees(e) {
-//     e.preventDefault(); // don't submit the form, we just want to update the data
-//     var selectedRoast = roastSelection.value;
-//     var filteredCoffees = [];
-//     coffees.forEach(function(coffee) {
-//         if (coffee.roast === selectedRoast) {
-//             filteredCoffees.push(coffee);
-//         }
-//     });
-//     tbody.innerHTML = renderCoffees(filteredCoffees);
-// }
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -56,15 +17,12 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-
 function displayCoffees() {
     var html = '';
     coffees.forEach(function (coffees) {
         html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
     });
     document.getElementById('coffeeType').innerHTML = html;
-
-
 }
 
 displayCoffees();
@@ -73,8 +31,7 @@ var target = document.getElementById('roast-selection');
 var coffeeName = document.getElementById('coffeeName');
 var x = "";
 var y = "";
-var html = '';
-
+var html = "";
 
 target.addEventListener("change", function () {
 
@@ -84,39 +41,24 @@ target.addEventListener("change", function () {
 
         if (x === coffees.roast) {
 
-
             html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
         }
         document.getElementById('coffeeType').innerHTML = html;
-
-
     })
 });
-
 
 coffeeName.addEventListener("input", function () {
     html = '';
     y = document.getElementById("coffeeName").value.toLowerCase();
 
     coffees.forEach(function (coffees) {
-
-
-
-
         if (coffees.name.toLowerCase().includes(y)) {
             if (x === coffees.roast) {
 
-                console.log("the name and type is " + coffees.name + coffees.roast);
-
-
                 html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
             }
-
-
-            console.log(y);
         }
     });
     document.getElementById('coffeeType').innerHTML = html;
-
 });
 
