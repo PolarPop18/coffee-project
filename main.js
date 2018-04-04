@@ -53,33 +53,16 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
-// var roastSelection = document.querySelector('#roast-selection');
-//
-// tbody.innerHTML = renderCoffees(coffees);
-//
-// submitButton.addEventListener('click', updateCoffees);
 
 
+function displayCoffees() {
+    var html = '';
+    coffees.forEach(function (coffees) {
+        html += "<div class='col-lg-5 d-inlineflex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
+    });
+    document.getElementById('coffeeType').innerHTML = html;
 
 
-for(var i = 0; i <   coffees.length; i++){
-
-    var html = "<div class='col-lg-5 d-inlineflex pb-4 mr-2'><h3 class=' pr-1  d-inline'>" +
-                    "" + coffees[i].name + "</h3>"+ "<p class='d-inline text-secondary'>"
-                     + coffees[i].roast + "</p></div>";
-
-   // document.write(html)
-
-
-
-    document.getElementById('coffeeType').innerHTML += html;
 }
 
-
-// coffees.forEach(function (coffees) {
-//     var i = 0;
-//
-//     i++;
-// });
+displayCoffees();
