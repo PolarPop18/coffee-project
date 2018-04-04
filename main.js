@@ -9,9 +9,6 @@
 //     html += '</tr>';
 
 
-
-
-
 // function renderCoffee(coffee) {
 //     var html = '<tr class="coffee">';
 //     html += '<td>' + coffee.name + '</td>';
@@ -60,7 +57,6 @@ var coffees = [
 ];
 
 
-
 function displayCoffees() {
     var html = '';
     coffees.forEach(function (coffees) {
@@ -80,11 +76,11 @@ var y = "";
 var html = '';
 
 
-target.addEventListener("change", function() {
+target.addEventListener("change", function () {
 
     html = '';
     coffees.forEach(function (coffees) {
-         x = document.getElementById("roast-selection").value;
+        x = document.getElementById("roast-selection").value;
 
         if (x === coffees.roast) {
 
@@ -94,26 +90,33 @@ target.addEventListener("change", function() {
         document.getElementById('coffeeType').innerHTML = html;
 
 
-    })});
+    })
+});
 
 
-
-coffeeName.addEventListener("input", function() {
-
+coffeeName.addEventListener("input", function () {
+    html = '';
+    y = document.getElementById("coffeeName").value.toLowerCase();
 
     coffees.forEach(function (coffees) {
-        y = document.getElementById("coffeeName").value;
-
-        if (coffees.name.match(y)) {
 
 
-            console.log("the if statement is firing")
 
-            // html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
+
+        if (coffees.name.toLowerCase().includes(y)) {
+            if (x === coffees.roast) {
+
+                console.log("the name and type is " + coffees.name + coffees.roast);
+
+
+                html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
+            }
+
+
+            console.log(y);
         }
-        document.getElementById('test').innerHTML = html;
+    });
+    document.getElementById('coffeeType').innerHTML = html;
 
+});
 
-    })});
-
-console.log(y);
