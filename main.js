@@ -66,7 +66,7 @@ var coffees = [
 
 for(var i = 0; i <   coffees.length; i++){
 
-    var html = "<div class='col-lg-5 d-inlineflex mr-2'><h3 class=' pr-1  d-inline'>" +
+    var html = "<div class='col-lg-5 d-inlineflex pb-4 mr-2'><h3 class=' pr-1  d-inline'>" +
                     "" + coffees[i].name + "</h3>"+ "<p class='d-inline text-secondary'>"
                      + coffees[i].roast + "</p></div>";
 
