@@ -48,6 +48,13 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
+
+
+
+
+
+}
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -55,3 +62,6 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+target.addEventListener(‘click’, function () {
+    document.querySelector(‘H1’).innerText=“Hi Everybody!:
