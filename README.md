@@ -13,13 +13,13 @@ improvements to it.
 1. Read through the code and understand the existing code structure
 
 ## TODO
-
+/*********** DONE*****************/
 - Update the html
-
     Tables are a little old school, you need to refactor the code so that each
     coffee is displayed in a `div` that contains a heading displaying the coffee
     name, and the type of roast in a paragraph. Don't display the ids, these are
     only for our application's internal use
+    /***************************/
 
 - When the page loads, the coffees should be sorted by their ids in ascending
   order
