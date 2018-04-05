@@ -1,6 +1,39 @@
+audio {
+    display: none;
+
+}
+
+body {
+    background-color: bisque;
+    background-image: url("img/the_barista.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "IBM Plex Sans";
+}
+
+@font-face {
+    font-family: IBM Plex Sans Condensed;
+    src: url("IBM_Plex_Sans_Condensed");
+}
+
+img { opacity: .5;
+    border-radius: 50%;
+    width: 25%;
+    height: 50%;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
+}
+
+.btn-primary {
+    background-color: darkgoldenrod;
 }
 
 td, th {
@@ -10,8 +43,6 @@ td, th {
 
 coffeeContainer {
     margin-right: 0;
-
-
 
 }
 

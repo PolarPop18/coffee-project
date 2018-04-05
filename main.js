@@ -71,6 +71,8 @@ coffeeName.addEventListener("input", function () {
     document.getElementById('coffeeType').innerHTML = html;
 });
 
+var addName= document.getElementById("addNew");
+
 
 //the function that add coffees to the array and list
 function addCoffee(){
