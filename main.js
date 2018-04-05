@@ -1,7 +1,43 @@
 "use strict";
 
+var localCount = 0;
 
 
+    function retrieve() {
+        var theCount = localStorage.getItem("count");
+
+        for (var i = 0; i < theCount; i++) {
+            for (var j = 0; j < 3; j++) {
+            }
+            var cofid = localStorage.getItem("item" + i);
+            i++;
+            var cofname = localStorage.getItem("item" + i);
+            i++;
+            var cofroast = localStorage.getItem("item" + i);
+
+            var newCoffee = {id: cofid, name: cofname, roast: cofroast};
+
+            coffees.push(newCoffee);
+        }
+
+
+    }
+}
+
+    function setLocal() {
+        coffees.forEach(function () {
+            var counter1 = localCount + 1;
+            var counter2 = localCount + 2;
+
+            localStorage.setItem("item" + localCount, coffees.id);
+            localStorage.setItem("item" + counter1, coffees.name);
+            localStorage.setItem("item" + counter2, coffees.roast);
+            localCount++;
+
+
+        });
+        localStorage.setItem("count", localCount);
+    }
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -38,6 +74,7 @@ var coffeeName = document.getElementById('coffeeName');
 var x = "";
 var y = "";
 var html = "";
+var newCoffee = "";
 
 //the function that only shows the coffee based on the type in the selector
 target.addEventListener("change", function () {
@@ -71,8 +108,6 @@ coffeeName.addEventListener("input", function () {
     document.getElementById('coffeeType').innerHTML = html;
 });
 
-var addName= document.getElementById("addNew");
-
 
 //the function that add coffees to the array and list
 function addCoffee(){
@@ -83,7 +118,10 @@ function addCoffee(){
 
     coffees.push(newCoffee);
     displayCoffees();
+    setlocal();
 }
 addName.addEventListener('click',addCoffee);
+
+
 
 
