@@ -16,6 +16,10 @@ body {
     font-family: "IBM Plex Sans";
 }
 
+h1{ padding-top: 25px;
+    display: center;
+    padding-bottom: 0;
+}
 @font-face {
     font-family: IBM Plex Sans Condensed;
     src: url("IBM_Plex_Sans_Condensed");

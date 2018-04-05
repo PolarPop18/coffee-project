@@ -82,13 +82,17 @@ target.addEventListener("change", function () {
     coffees.forEach(function (coffees) {
         x = document.getElementById("roast-selection").value;
 
-        if (x === coffees.roast) {
+        if (x === 'all' || x === coffees.roast) {
 
             html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
         }
         document.getElementById('coffeeType').innerHTML = html;
     })
 });
+
+
+
+
 
 //the function that is the small search engine
 coffeeName.addEventListener("input", function () {
@@ -106,7 +110,7 @@ coffeeName.addEventListener("input", function () {
         }
     });
     document.getElementById('coffeeType').innerHTML = html;
-});
+
 
 
 //the function that add coffees to the array and list
