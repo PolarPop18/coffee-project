@@ -62,7 +62,6 @@ coffeeName.addEventListener("input", function () {
     document.getElementById('coffeeType').innerHTML = html;
 });
 
-    })});
 var addName= document.getElementById("addNew");
 
 
