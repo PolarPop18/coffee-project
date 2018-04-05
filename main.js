@@ -1,8 +1,6 @@
 "use strict";
 
-var theThing1 = localStorage.getItem("item1");
-var theThing2 = localStorage.getItem("item2");
-var theThing3 = localStorage.getItem("item3");
+
 
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -40,13 +38,6 @@ var coffeeName = document.getElementById('coffeeName');
 var x = "";
 var y = "";
 var html = "";
-var stringy1 = "";
-var stringy2 = "";
-var stringy3 = "";
-
-function localCreator() {
-    
-}
 
 
 target.addEventListener("change", function () {
@@ -80,10 +71,7 @@ coffeeName.addEventListener("input", function () {
     document.getElementById('coffeeType').innerHTML = html;
 });
 
-
 var addName= document.getElementById("addNew");
-
-
 
 function addCoffee(){
 
@@ -92,22 +80,12 @@ function addCoffee(){
     var roastNew = document.getElementById('RoastAdd').value;
     var newCoffee= {id:coffees.length + 1 , name: coffeeName, roast: roastNew};
 
-    stringy1 = newCoffee.id.toString();
-    stringy2 = newCoffee.name.toString();
-    stringy3 = newCoffee.roast.toString();
-
     coffees.push(newCoffee);
    displayCoffees();
 
-    localStorage.setItem("item1",stringy1);
-    localStorage.setItem("item2",stringy2);
-    localStorage.setItem("item3",stringy3);
 
 }
 addName.addEventListener('click',addCoffee);
-
-
-var thing = localStorage.getItem("data");
 
 document.getElementById("coffeeName").placeholder = thing;
 
