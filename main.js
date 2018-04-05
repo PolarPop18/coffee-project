@@ -1,5 +1,9 @@
 "use strict";
 
+var theThing1 = localStorage.getItem("item1");
+var theThing2 = localStorage.getItem("item2");
+var theThing3 = localStorage.getItem("item3");
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -15,7 +19,10 @@ var coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
+    {id: theThing1, name: theThing2, roast: theThing3}
 ];
+
+
 
 function displayCoffees() {
     var html = '';
@@ -25,6 +32,7 @@ function displayCoffees() {
     document.getElementById('coffeeType').innerHTML = html;
 }
 
+
 displayCoffees();
 
 var target = document.getElementById('roast-selection');
@@ -32,6 +40,14 @@ var coffeeName = document.getElementById('coffeeName');
 var x = "";
 var y = "";
 var html = "";
+var stringy1 = "";
+var stringy2 = "";
+var stringy3 = "";
+
+function localCreator() {
+    
+}
+
 
 target.addEventListener("change", function () {
 
@@ -55,6 +71,8 @@ coffeeName.addEventListener("input", function () {
         if (coffees.name.toLowerCase().includes(y)) {
             if (x === coffees.roast) {
 
+                localStorage.setItem("data", y);
+
                 html += "<div class='col-lg-5 d-inline flex pb-4 mr-2'><h3>" + coffees.name + "</h3><p>" + coffees.roast + "</p></div>";
             }
         }
@@ -62,7 +80,7 @@ coffeeName.addEventListener("input", function () {
     document.getElementById('coffeeType').innerHTML = html;
 });
 
-    })});
+
 var addName= document.getElementById("addNew");
 
 
@@ -71,12 +89,32 @@ function addCoffee(){
 
     event.preventDefault();
     var coffeeName= document.getElementById("addName").value;
-    // document.getElementById('coffeeType').innerHTML = html;
-   var roastNew = document.getElementById('RoastAdd').value;
+    var roastNew = document.getElementById('RoastAdd').value;
     var newCoffee= {id:coffees.length + 1 , name: coffeeName, roast: roastNew};
+
+    stringy1 = newCoffee.id.toString();
+    stringy2 = newCoffee.name.toString();
+    stringy3 = newCoffee.roast.toString();
+
     coffees.push(newCoffee);
-   displayCoffees()
+   displayCoffees();
+
+    localStorage.setItem("item1",stringy1);
+    localStorage.setItem("item2",stringy2);
+    localStorage.setItem("item3",stringy3);
+
 }
 addName.addEventListener('click',addCoffee);
+
+
+var thing = localStorage.getItem("data");
+
+document.getElementById("coffeeName").placeholder = thing;
+
+
+
+
+
+
 
 
