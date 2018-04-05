@@ -87,10 +87,3 @@ function addCoffee(){
 addName.addEventListener('click',addCoffee);
 
 
-
-
-
-
-
-
-
